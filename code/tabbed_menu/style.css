@@ -1,0 +1,106 @@
+* {
+  text-decoration: none;
+  color: #FFF;
+  align-content: center;
+    text-align: center;
+}
+
+body {
+  font-family: 'Questrial';
+  background-color: #212e45;
+}
+
+h1 {
+  color: #ffd900;
+  font-size: 5em;
+}
+
+p {
+  color: #c4c4c4;
+  width: 60%;
+  align-content: center;
+    text-align: center;
+    display: inline-block;
+    float: center;
+}
+
+.menuBGs {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.oneBG {
+  background-color: #de6800;
+  width: 100%;
+  padding-top: 0.2%;
+  height: 50px;
+}
+
+.twoBG {
+  background-color: #a3de00;
+  width: 100%;
+  height: 50%;
+  padding-top: 0.2%;
+  height: 50px;
+}
+
+.threeBG {
+  background-color: #00de98;
+  width: 100%;
+  height: 50%;
+  padding-top: 0.2%;
+  height: 50px;
+}
+
+.fourBG {
+  background-color: #058aff;
+  width: 100%;
+  height: 50%;
+  padding-top: 0.2%;
+  height: 50px;
+}
+
+.menu {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.one {
+  background-color: #de6800;
+  border-radius: 30px;
+  width: 100px;
+  margin-left: 30%;
+  padding: 30px;
+}
+
+.two {
+  background-color: #a3de00;
+  border-radius: 30px;
+  width: 100px;
+  margin-left: 40%;
+  margin-top: -30px;
+  padding: 30px;
+}
+
+.three {
+  background-color: #00de98;
+  border-radius: 30px;
+  width: 100px;
+  margin-left: 50%;
+  margin-top: -30px;
+  padding: 30px;
+}
+
+.four {
+  background-color: #058aff;
+  border-radius: 30px;
+  width: 100px;
+  margin-left: 60%;
+  margin-top: -30px;
+  padding: 30px;
+}
