@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Capriola';
+  font-size: 1.8rem;
+  background-color: #555c5e;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  /* other necessary CSS */
+}
+
+button {
+  color: #FFFFFF;
+  background-color: #555c5e;
+}
+
+.calculator {
+  justify-content: center;
+  width: 400px;
+}
+
+.operator {
+  background-color: #f55142;
+}
+
+#clear {
+  background-color: #174e5e;
+
+}
+
+.output {
+  margin: 0px;
+  text-align: right;
+  color: #ffffff;
+}
+
+#previous {
+  color: #babebf;
+  font-size: 1rem;
+}
