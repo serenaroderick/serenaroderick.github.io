@@ -17,15 +17,25 @@
     </div>
       <div id="pages">
         <ul>
-          <li><a id="page" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-          <li><a id="page" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-          <li><a id="page" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-          <li><a id="page" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-          <li><a id="page" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
+        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
+        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
+        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
+        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
+        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
       </ul>
     </div>
   </div>
-  <!-- <script src="js/scripts.js"></script> -->
+  <script>
+                                                   
+  function mouseOver(x) {
+    x.style.color = "white";
+  }
+  
+  function mouseOut(x) {
+    x.style.color = "#D3D3D3";
+  }
+
+  </script>
   <div id="main">
     <div class="typeform-widget" data-url="https://form.typeform.com/to/Y6VY5bAi?typeform-medium=embed-snippet" style="width: 100%; height: 500px;">
     </div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/";
