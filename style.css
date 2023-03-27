@@ -16,6 +16,7 @@ li, a, ul {
 
 #about, #code, #design, #writing, #contact {
   padding: 20px;
+  color: #d3d3d3;
 }
 
 #logo {
