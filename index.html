@@ -26,8 +26,8 @@
     </div>
   </div>
   <script>
-    document.getElementById("page").onmouseover = { mouseOver() };
-    document.getElementById("page").onmouseout = { mouseOut() };
+    document.getElementById("page").onmouseover = function() { mouseOver() };
+    document.getElementById("page").onmouseout = function() { mouseOut() };
                                                    
   function mouseOver() {
     this.style.color = "blue";
