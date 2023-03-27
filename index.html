@@ -17,7 +17,7 @@
     </div>
       <div id="pages">
         <ul>
-        <li><a id="page" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
+        <li><a id="page" onmouseover="mouseOver" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
         <li><a id="page" href="https://serenaroderick.github.io/code.html">CODE</a></li>
         <li><a id="page" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
         <li><a id="page" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
@@ -26,10 +26,17 @@
     </div>
   </div>
   <script>
-    document.getElementById("page").onmouseover = function() {
-      this.style.color(blue);
-    };
-    
+    document.getElementById("page").onmouseover = { mouseOver() };
+    document.getElementById("page").onmouseout = { mouseOut() };
+                                                   
+  function mouseOver() {
+    this.style.color = "blue";
+  }
+  
+  function mouseOut() {
+    this.style.color = "white";
+  }
+
   </script>
   <div id="main">
     <div id="homeImg"></div>
