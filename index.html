@@ -17,17 +17,15 @@
     </div>
       <div id="pages">
         <ul>
-        <li><a id="page" onmouseover="mouseOver" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
+        <li><a id="about" onmouseover="mouseOver()" onmouseout="mouseOut" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
+        <li><a id="code" onmouseover="mouseOver()" onmouseout="mouseOut" href="https://serenaroderick.github.io/code.html">CODE</a></li>
+        <li><a id="design" onmouseover="mouseOver()" onmouseout="mouseOut" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
+        <li><a id="writing" onmouseover="mouseOver()" onmouseout="mouseOut" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
+        <li><a id="contact" onmouseover="mouseOver()" onmouseout="mouseOut" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
       </ul>
     </div>
   </div>
   <script>
-    document.getElementById("page").style.color = "blue";
-    document.getElementById("page").onmouseout = function() { mouseOut() };
                                                    
   function mouseOver() {
     this.style.color = "blue";
