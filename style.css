@@ -19,6 +19,28 @@ li, a, ul {
   color: #d3d3d3;
 }
 
+.sliding-middle-out {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.sliding-middle-out:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-middle-out:hover:after {
+  width: 100%;
+  background: #white;
+}
+
+
 #logo {
   width: 10em;
   align: left;
