@@ -14,7 +14,7 @@ li, a, ul {
     display: inline-block;
 }
 
-#page {
+.about, .code, .design, .writing, .contact {
   padding: 20px;
 }
 
