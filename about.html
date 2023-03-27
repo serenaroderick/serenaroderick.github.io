@@ -15,17 +15,27 @@
       <a href="https://serenaroderick.github.io/">
         <img id="logo" src="img/LogoWhite.png"></a>
     </div>
-    <div id="pages">
-      <ul>
-        <li><a id="page" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="page" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
+      <div id="pages">
+        <ul>
+        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
+        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
+        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
+        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
+        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
       </ul>
     </div>
   </div>
-  <!-- <script src="js/scripts.js"></script> -->
+  <script>
+                                                   
+  function mouseOver(x) {
+    x.style.color = "white";
+  }
+  
+  function mouseOut(x) {
+    x.style.color = "#D3D3D3";
+  }
+
+  </script>
   <div id="main">
     <h1 id="title">Hello!</h1>
     <h2>Welcome to my Portfolio!</h2>
