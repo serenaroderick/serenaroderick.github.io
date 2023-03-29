@@ -170,6 +170,10 @@ h1 {
   margin-left: -25px;
 }
 
+#img5 {
+  background-image: url(img/img6.jpg);
+}
+
 /* Writing.html */
 
 .writing {
