@@ -147,20 +147,25 @@ h1 {
 }
 
 #img1 {
-  background-image: url(img/img1.jpg);
+  background-image: url(img/img4.png);
 }
 
 #img2 {
-  background-image: url(img/img2.png);
+  background-image: url(img/img1.jpg);
   margin-left: -5px;
 }
 
 #img3 {
-  background-image: url(img/img3.jpg);
+  background-image: url(img/img2.png);
   margin-left: -5px;
 }
 
 #img4 {
+  background-image: url(img/img3.jpg);
+  margin-left: -25px;
+}
+
+#img5 {
   background-image: url(img/img4.png);
   margin-left: -25px;
 }
