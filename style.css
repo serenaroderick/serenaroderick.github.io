@@ -148,16 +148,17 @@ h1 {
 
 #img1 {
   background-image: url(img/img1.jpg);
+  margin-left: -25px;
 }
 
 #img2 {
   background-image: url(img/img2.jpg);
-  margin-left: -5px;
+  margin-left: -25px;
 }
 
 #img3 {
   background-image: url(img/img3.png);
-  margin-left: -5px;
+  margin-left: -25px;
 }
 
 #img4 {
@@ -172,6 +173,7 @@ h1 {
 
 #img5 {
   background-image: url(img/img6.jpg);
+  margin-left: -25px;
 }
 
 /* Writing.html */
