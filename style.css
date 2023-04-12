@@ -14,7 +14,6 @@ li, a, ul {
     display: inline-block;
 }
 #about, #code, #design, #writing, #contact {
-  background: #FFF;
   position: relative;
   padding-bottom: 10px; /* make room for the underline */
   padding: 20px;
