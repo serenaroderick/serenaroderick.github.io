@@ -4,7 +4,7 @@
  */
 var romanToInt = function() {
     var inputField = document.getElementById("romanInput");
-    var s = inputField.value;
+    var s = inputField.value.toUpperCase();
     var result = document.getElementById("sumResult");
  
     let sum = 0;
