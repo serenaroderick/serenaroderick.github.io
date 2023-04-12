@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Serena Roderick</title>
+  <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+</head>
+
+<body>
+  <div id="menu">
+    <div id="logo">
+      <a href="https://serenaroderick.github.io/">
+        <img id="logo" src="img/LogoWhite.png"></a>
+    </div>
+      <div id="pages">
+        <ul>
+        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
+        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
+        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
+        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
+        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="romanToInt.js"></script>
+ <div class="roman">
+    <h2>Convert Roman Numeral to Integer</h2>
+    <input id="romanInput" type="text"></input>
+    <button onclick="romanToInt()" type="button">Convert</button>
+    <h3 id="sumResult"></h3>
+    
+ </div> 
+
+
+</body>
+
+</html>
