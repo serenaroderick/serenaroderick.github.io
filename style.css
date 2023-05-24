@@ -166,18 +166,24 @@
   }
   
   #img2 {
-    background-image: url(img/img2.png);
-    margin-left: -5px;
+    background-image: url(img/img2.jpg);
   }
   
   #img3 {
-    background-image: url(img/img3.jpg);
-    margin-left: -5px;
+    background-image: url(img/img3.png);
   }
   
   #img4 {
-    background-image: url(img/img4.png);
+    background-image: url(img/img4.jpg);
+  }
+  
+  #img5 {
+    background-image: url(img/img5.png);
     margin-left: -25px;
+  }
+  
+  #img6 {
+    background-image: url(img/img6.jpg);
   }
   
   /* Writing.html */
