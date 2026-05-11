@@ -12,12 +12,6 @@
 
 <!-- BACKGROUND -->
 <div class="bg-video-wrap">
-<!--   
-    To add your rain wallpaper video:
-    1. Export a ~10s loop from Wallpaper Engine as rain_loop.mp4
-    2. Drop it in your repo root
-    3. Uncomment the video tag below
-  -->
   <video autoplay muted loop playsinline>
     <source src="bg.mp4" type="video/mp4" />
   </video>
@@ -30,12 +24,15 @@
 <div class="site">
 
   <nav>
-    <a href="/" class="nav-logo">Serena Roderick</a>
+    <div >
+      <img src="img/LogoWhite.png" alt="Serena Roderick Logo" class="nav-logo" />
+      <a href="/" class="nav-logo">Serena Roderick</a>
+    </div>
     <ul class="nav-links">
       <li><a href="/about.html">About</a></li>
       <li><a href="/code.html">Code</a></li>
       <li><a href="/design.html">Design</a></li>
-      <li><a href="/writing.html">Writing</a></li>
+      <li><a href="/blog.html">Blog</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -43,6 +40,7 @@
   <main class="hero">
     <div class="hero-card">
       <p class="hero-eyebrow">Software Developer &amp; Designer</p>
+      <img src="img/LogoWhite.png" alt="Serena Roderick Logo" class="hero-logo" />
       <h1 class="hero-name">Serena<br /><em>Roderick</em></h1>
       <p class="hero-sub">
         iOS &amp; full-stack developer with a design eye.<br />
@@ -102,57 +100,6 @@
   </footer>
 
 </div>
-
-<!-- RAIN CANVAS -->
-<script>
-  const canvas = document.getElementById('rain-canvas');
-  const ctx = canvas.getContext('2d');
-  let drops = [];
-  let W, H;
-
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-
-  function initDrops() {
-    drops = [];
-    const count = Math.floor(W * 0.06);
-    for (let i = 0; i < count; i++) {
-      drops.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        len: 8 + Math.random() * 18,
-        speed: 6 + Math.random() * 10,
-        opacity: 0.15 + Math.random() * 0.45,
-        width: 0.5 + Math.random() * 0.8
-      });
-    }
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    drops.forEach(d => {
-      ctx.beginPath();
-      ctx.moveTo(d.x, d.y);
-      ctx.lineTo(d.x - 1, d.y + d.len);
-      ctx.strokeStyle = `rgba(200, 230, 210, ${d.opacity})`;
-      ctx.lineWidth = d.width;
-      ctx.stroke();
-      d.y += d.speed;
-      if (d.y > H) {
-        d.y = -d.len;
-        d.x = Math.random() * W;
-      }
-    });
-    requestAnimationFrame(draw);
-  }
-
-  resize();
-  initDrops();
-  draw();
-  window.addEventListener('resize', () => { resize(); initDrops(); });
-</script>
 
 </body>
 </html>

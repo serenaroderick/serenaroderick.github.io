@@ -119,6 +119,12 @@
       border-color: var(--glass-border);
     }
 
+    img.nav-logo {
+      position: inline;
+      height: 50px;
+      width: auto;
+    }
+
     /* ── HERO ── */
     .hero {
       flex: 1;
@@ -175,6 +181,12 @@
       font-style: italic;
       color: var(--accent);
     }
+
+    img.hero-logo {
+      position: relative;
+      width: 70px;
+      height: auto;
+    } 
 
     .hero-sub {
       font-size: 0.95rem;
