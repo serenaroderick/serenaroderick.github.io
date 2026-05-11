@@ -1,3 +1,11 @@
+    let drops = [];
+    let W, H;
+
+    const canvas = document.getElementById('rain-canvas');
+
+if (canvas) {
+}    const ctx = canvas.getContext('2d');
+    
     function mouseOver(x) {
         x.style.color = "white";
         x.style.textDecoration = "underline";
@@ -8,11 +16,6 @@
         x.style.color = "#a9a9a9";
         x.style.textDecoration = "none";
     }
-
-    const canvas = document.getElementById('rain-canvas');
-    const ctx = canvas.getContext('2d');
-    let drops = [];
-    let W, H;
 
     function resize() {
         W = canvas.width = window.innerWidth;
