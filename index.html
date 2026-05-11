@@ -1,62 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-4KPKT5JEDR');
-  </script>
-  
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serena Roderick</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div id="menu">
-    <div id="logo">
-      <a href="https://serenaroderick.github.io/">
-        <img id="logo" src="img/LogoWhite.png"></a>
-    </div>
-      <div id="pages">
-        <ul>
-        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-  <script src="script.js"></script>
-  <div id="main">
-    <div id="homeImg"></div>
-    <div id="bio">
-      <h1 id="name">SERENA<br>RODERICK</h1>
-      <h3>BACHELOR'S OF SCIENCE</h3>
-      <h3> in COMPUTER SCIENCE & GRAPHIC DESIGN</h3>
-      <h3>from NORTHEASTERN UNIVERSITY</h3>
-      <div id="links">
-        <ul>
-          <li id="link">
-            <a  target="_blank" href="https://www.linkedin.com/in/serenaroderick/">
-              <img src="img/linkedin.png"></li></a>
-          <li id="link">
-            <a target="_blank" href="https://www.behance.net/serenaroderick">
-              <img src="img/behance.png"></li></a>
-          <li id="link"><a target="_blank" href="https://github.com/serenaroderick">
-            <img src="img/github.png"></li></a>
-        </ul>
+
+<!-- BACKGROUND -->
+<div class="bg-video-wrap">
+<!--   
+    To add your rain wallpaper video:
+    1. Export a ~10s loop from Wallpaper Engine as rain_loop.mp4
+    2. Drop it in your repo root
+    3. Uncomment the video tag below
+  -->
+  <video autoplay muted loop playsinline>
+    <source src="bg.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<canvas id="rain-canvas"></canvas>
+<div class="fog"></div>
+
+<!-- SITE -->
+<div class="site">
+
+  <nav>
+    <a href="/" class="nav-logo">Serena Roderick</a>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/code.html">Code</a></li>
+      <li><a href="/design.html">Design</a></li>
+      <li><a href="/writing.html">Writing</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="hero">
+    <div class="hero-card">
+      <p class="hero-eyebrow">Software Developer &amp; Designer</p>
+      <h1 class="hero-name">Serena<br /><em>Roderick</em></h1>
+      <p class="hero-sub">
+        iOS &amp; full-stack developer with a design eye.<br />
+        CS &amp; Design, Northeastern University.
+      </p>
+      <div class="hero-links">
+        <a href="/code.html" class="btn btn-accent">Projects</a>
+        <a href="/design.html" class="btn">Design Work</a>
+        <a href="https://github.com/serenaroderick" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/serenaroderick/" target="_blank" class="btn">LinkedIn</a>
       </div>
     </div>
-  </div>
-</body>
 
+    <section class="projects-section">
+      <p class="section-label">Recent Projects</p>
+      <div class="cards-grid">
+
+        <a href="https://chromewebstore.google.com/detail/quick-clip/maligdfbefdfedhingmhaolmeflcogij" target="_blank" class="project-card">
+          <p class="card-tag">Live · Chrome Extension</p>
+          <p class="card-title">Quick Clip</p>
+          <p class="card-desc">Custom field autofill extension. Key/value storage synced across Google accounts.</p>
+          <p class="card-stack">JavaScript · Chrome Storage API</p>
+        </a>
+
+        <a href="#" class="project-card">
+          <p class="card-tag">In Progress · Game</p>
+          <p class="card-title">Terminal Strategy Game</p>
+          <p class="card-desc">State-run turn-based strategy — Watchdogs meets Civilization. CLI-first, aiming for UI.</p>
+          <p class="card-stack">TypeScript · Node.js</p>
+        </a>
+
+        <a href="#" class="project-card">
+          <p class="card-tag">Deployed · Discord Bot</p>
+          <p class="card-title">Pizza Party Bot</p>
+          <p class="card-desc">Discord bot for a rule-based party game. REST-backed, live server deployment.</p>
+          <p class="card-stack">TypeScript · Discord.js · Express</p>
+        </a>
+
+        <a href="https://4digits.netlify.app/" target="_blank" class="project-card">
+          <p class="card-tag">Live · Web Game</p>
+          <p class="card-title">Cows &amp; Bulls</p>
+          <p class="card-desc">Multiplayer codebreaking game. Real-time concurrent gameplay, self-hosted.</p>
+          <p class="card-stack">Elixir · Phoenix · Linux VM</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-left">Philadelphia, PA · Open to remote</span>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/serenaroderick" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/serenaroderick/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/serenaroderick" target="_blank">Behance</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<!-- RAIN CANVAS -->
+<script>
+  const canvas = document.getElementById('rain-canvas');
+  const ctx = canvas.getContext('2d');
+  let drops = [];
+  let W, H;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function initDrops() {
+    drops = [];
+    const count = Math.floor(W * 0.06);
+    for (let i = 0; i < count; i++) {
+      drops.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        len: 8 + Math.random() * 18,
+        speed: 6 + Math.random() * 10,
+        opacity: 0.15 + Math.random() * 0.45,
+        width: 0.5 + Math.random() * 0.8
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    drops.forEach(d => {
+      ctx.beginPath();
+      ctx.moveTo(d.x, d.y);
+      ctx.lineTo(d.x - 1, d.y + d.len);
+      ctx.strokeStyle = `rgba(200, 230, 210, ${d.opacity})`;
+      ctx.lineWidth = d.width;
+      ctx.stroke();
+      d.y += d.speed;
+      if (d.y > H) {
+        d.y = -d.len;
+        d.x = Math.random() * W;
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  initDrops();
+  draw();
+  window.addEventListener('resize', () => { resize(); initDrops(); });
+</script>
+
+</body>
 </html>
