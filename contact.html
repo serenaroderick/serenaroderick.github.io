@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-4KPKT5JEDR');
   </script>
-  
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Serena Roderick</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-  <link rel="stylesheet" href="/style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <div id="menu">
-    <div id="logo">
-      <a href="https://serenaroderick.github.io/">
-        <img id="logo" src="img/LogoWhiteTransparent.png"></a>
-    </div>
-      <div id="pages">
-        <ul>
-        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
- <script src="script.js"></script>
-  <div id="main">
-    <div class="typeform-widget" data-url="https://form.typeform.com/to/Y6VY5bAi?typeform-medium=embed-snippet" style="width: 100%; height: 500px;">
-    </div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/";
-      if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-  </div>
-</body>
 
+<div class="bg-video-wrap"></div>
+<canvas id="rain-canvas"></canvas>
+<div class="fog"></div>
+
+<div class="site">
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img class="nav-logo" src="img/LogoWhiteTransparent.png" alt="Serena Roderick" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main style="flex:1; display:flex; align-items:center; justify-content:center; padding: 4rem 2rem;">
+
+    <div class="hero-card" style="max-width: 520px; width: 100%; text-align: center;">
+      <p class="hero-eyebrow">Get in touch</p>
+      <h1 class="hero-name" style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem;">Let's talk.</h1>
+      <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300; margin-bottom: 2rem;">
+        Open to remote contract and full-time opportunities. Also happy to talk shop, collaborate, or just connect.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+
+        <a href="mailto:roderick.s@northeastern.edu" class="btn" style="justify-content: center;">
+          roderick.s@northeastern.edu
+        </a>
+
+        <a href="https://www.linkedin.com/in/serenaroderick/" target="_blank" class="btn" style="justify-content: center;">
+          LinkedIn
+        </a>
+
+        <a href="https://github.com/serenaroderick" target="_blank" class="btn" style="justify-content: center;">
+          GitHub
+        </a>
+
+        <a href="https://www.behance.net/serenaroderick" target="_blank" class="btn btn-accent" style="justify-content: center;">
+          Behance · Design Work
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-left">Philadelphia, PA · Open to remote</span>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/serenaroderick" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/serenaroderick/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/serenaroderick" target="_blank">Behance</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>

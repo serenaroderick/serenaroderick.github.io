@@ -1,51 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4KPKT5JEDR');
-</script>
-  
-  <meta charset="utf-8">
-  <title>Roman Numeral Converter</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4KPKT5JEDR');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Numeral Converter | Serena Roderick</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    .converter-input {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.25rem;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .converter-input::placeholder {
+      color: var(--text-muted);
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+    .converter-input:focus {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.12);
+    }
+    .result {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 400;
+      color: var(--accent);
+      min-height: 4rem;
+      transition: opacity 0.2s;
+    }
+    .ref-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .ref-pill {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.06em;
+    }
+    .ref-pill span {
+      color: var(--accent);
+      font-weight: 500;
+    }
+  </style>
 </head>
-
 <body>
-  <div id="menu">
-    <div id="logo">
-      <a href="https://serenaroderick.github.io/">
-        <img id="logo" src="img/LogoWhiteTransparent.png"></a>
-    </div>
-      <div id="pages">
-        <ul>
-        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-  <script src="romanToInt.js"></script>
- <div class="roman">
-    <h2>Convert Roman Numeral to Integer</h2>
-    <h5>I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000</h5>
-    <input id="romanInput" type="text"></input>
-    <button onclick="romanToInt()" type="button">Convert</button>
-    <h2 id="sumResult"></h2>
-    
- </div> 
 
+<div class="bg-video-wrap"></div>
+<canvas id="rain-canvas"></canvas>
+<div class="fog"></div>
 
+<div class="site">
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img class="nav-logo" src="img/LogoWhiteTransparent.png" alt="Serena Roderick" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main style="flex:1; display:flex; align-items:center; justify-content:center; padding: 4rem 2rem;">
+
+    <div class="hero-card" style="max-width: 520px; width: 100%; text-align: center;">
+      <p class="hero-eyebrow">Tool</p>
+      <h1 class="hero-name" style="font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 0.5rem;">Roman Numeral Converter</h1>
+      <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem; font-weight: 300;">Type a roman numeral and hit Convert.</p>
+
+      <div class="ref-row">
+        <span class="ref-pill"><span>I</span> = 1</span>
+        <span class="ref-pill"><span>V</span> = 5</span>
+        <span class="ref-pill"><span>X</span> = 10</span>
+        <span class="ref-pill"><span>L</span> = 50</span>
+        <span class="ref-pill"><span>C</span> = 100</span>
+        <span class="ref-pill"><span>D</span> = 500</span>
+        <span class="ref-pill"><span>M</span> = 1000</span>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; margin-bottom: 2rem;">
+        <input
+          id="romanInput"
+          class="converter-input"
+          type="text"
+          placeholder="e.g. XIV"
+          onkeydown="if(event.key==='Enter') romanToInt()"
+        />
+        <button class="btn btn-accent" onclick="romanToInt()" style="white-space: nowrap; padding: 0.75rem 1.5rem;">
+          Convert
+        </button>
+      </div>
+
+      <div class="result" id="sumResult">&nbsp;</div>
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-left">Philadelphia, PA · Open to remote</span>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/serenaroderick" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/serenaroderick/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/serenaroderick" target="_blank">Behance</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+<script src="romanToInt.js"></script>
 </body>
-
 </html>

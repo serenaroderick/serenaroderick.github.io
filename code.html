@@ -1,102 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-4KPKT5JEDR');
   </script>
-  
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code | Serena Roderick</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <div id="menu">
-    <div id="logo">
-      <a href="https://serenaroderick.github.io/">
-        <img id="logo" src="img/LogoWhiteTransparent.png"></a>
-    </div>
-      <div id="pages">
-        <ul>
-        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
- <script src="script.js"></script>
 
-  <div>
-  <h1 id="title">Code</h1>
-  <div id="projects">
+<div class="bg-video-wrap"></div>
+<canvas id="rain-canvas"></canvas>
+<div class="fog"></div>
 
-    <div class="code" id="c1">
-      <div id="cBio">
-        <h1>1.</h1>
-        <h2>QUICK CLIP CHROME EXTENSION</h2>
-        <h4>JULY 2023</h4>
-        <p>Chrome extension for quick access to custom commonly used text values</p>
-        <h4>JAVASCRIPT, HTML, CSS</h4>
-      </div>
-      <a href="https://chrome.google.com/webstore/detail/quick-clip/maligdfbefdfedhingmhaolmeflcogij?hl=en&authuser=0" id="button">TRY IT</a>
-    </div>
-    
-    <div class="code" id="c2">
-      <div id="cBio">
-        <h1>2.</h1>
-        <h2>ROMAN NUMERAL CONVERTER</h2>
-        <h4>APRIL 2023</h4>
-        <p>Converter of roman numerals to integers</p>
-        <h4>JAVASCRIPT, HTML, CSS</h4>
-      </div>
-      <a href="/romanToInt.html" id="button">TRY IT</a>
-    </div>
+<div class="site">
 
-    <div class="code" id="c3">
-      <div id="cBio">
-        <h1>3.</h1>
-        <h2>COWS & BULLS</h2>
-        <h4>FEBRUARY 2020</h4>
-        <p>Variation of the children's game mastermind. User tries to guess a randomly generated 4 digit code using hints given by the computer.</p>
-        <h4>LINUX, ELIXIR, PHEONIX, JAVASCRIPT</h4>
-      </div>
-      <a href="https://4digits.netlify.app/" id="button">TRY IT</a>
-    </div>
+  <nav>
+    <a href="/" class="nav-logo">
+      <img class="nav-logo" src="img/LogoWhiteTransparent.png" alt="Serena Roderick" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="code" id="c4">
-      <div id="cBio">
-        <h1>4.</h1>
-        <h2>STACK CALCULATOR</h2>
-        <h4>JANUARY 2020</h4>
-        <p>Using a stack calculator, numbers are pushed on a stack, and operations such as addition and multiplication pop numbers off the stack and push the result back on.</p>
-        <h4>JAVASCRIPT</h4>
-      </div>
-      <a href="https://serenaroderick.github.io/code/calculator" id="button">TRY IT</a>
+  <main style="flex:1; padding: 4rem 2rem; max-width: 960px; margin: 0 auto; width: 100%;">
+
+    <p class="section-label" style="margin-bottom: 2rem;">Code</p>
+
+    <!-- RECENT -->
+    <p class="section-label">Recent</p>
+    <div class="cards-grid" style="margin-bottom: 3rem;">
+
+      <a href="https://chromewebstore.google.com/detail/quick-clip/maligdfbefdfedhingmhaolmeflcogij" target="_blank" class="project-card">
+        <p class="card-tag">Live · Chrome Extension</p>
+        <p class="card-title">Quick Clip</p>
+        <p class="card-desc">Custom field autofill extension. Key/value storage synced across Google accounts with search, copy, sort, and delete.</p>
+        <p class="card-stack">JavaScript · Chrome Storage API · Chrome Web Store</p>
+      </a>
+
+      <a href="#" class="project-card">
+        <p class="card-tag">In Progress · Game</p>
+        <p class="card-title">Terminal Strategy Game</p>
+        <p class="card-desc">State-run turn-based strategy — Watchdogs meets Civilization. CLI-first, planned UI expansion.</p>
+        <p class="card-stack">TypeScript · Node.js</p>
+      </a>
+
+      <a href="#" class="project-card">
+        <p class="card-tag">Deployed · Discord Bot</p>
+        <p class="card-title">Pizza Party Bot</p>
+        <p class="card-desc">Bot for a rule-based party game — spin a coin in a pizza box, make a rule. REST-backed with live server deployment.</p>
+        <p class="card-stack">TypeScript · Discord.js · Express</p>
+      </a>
+
+      <a href="https://4digits.netlify.app/" target="_blank" class="project-card">
+        <p class="card-tag">Live · Web Game</p>
+        <p class="card-title">Cows &amp; Bulls</p>
+        <p class="card-desc">Multiplayer codebreaking game. Guess the 4-digit code using hints from the computer.</p>
+        <p class="card-stack">Elixir · Phoenix · Linux VM · Netlify</p>
+      </a>
+
     </div>
 
-    <div class="code" id="c5">
-      <div id="cBio">
-        <h1>5.</h1>
-        <h2>TABBED MENU</h2>
-        <h4>FEBRUARY 2020</h4>
-        <p>Illustrated my knowledge of HTML & CSS by creating a unique menu design for a portfolio type of website.</p>
-        <h4>HMTL & CSS</h4>
-      </div>
-      <a href="https://serenaroderick.github.io/code/tabbed_menu/index.html" id="button">TRY IT</a>
+    <!-- ARCHIVE -->
+    <p class="section-label">Archive</p>
+    <div class="cards-grid">
+
+      <a href="https://serenaroderick.github.io/romanToInt.html" target="_blank" class="project-card">
+        <p class="card-tag">2023 · Tool</p>
+        <p class="card-title">Roman Numeral Converter</p>
+        <p class="card-desc">Converts roman numerals to integers.</p>
+        <p class="card-stack">JavaScript · HTML · CSS</p>
+      </a>
+
+      <a href="https://serenaroderick.github.io/code/calculator" target="_blank" class="project-card">
+        <p class="card-tag">2020 · Tool</p>
+        <p class="card-title">Stack Calculator</p>
+        <p class="card-desc">Push/pop calculator using a stack data structure for operations.</p>
+        <p class="card-stack">JavaScript</p>
+      </a>
+
+      <a href="https://serenaroderick.github.io/code/tabbed_menu/index.html" target="_blank" class="project-card">
+        <p class="card-tag">2020 · UI</p>
+        <p class="card-title">Tabbed Menu</p>
+        <p class="card-desc">Illustrated HTML &amp; CSS knowledge with a unique portfolio-style menu design.</p>
+        <p class="card-stack">HTML · CSS</p>
+      </a>
+
     </div>
-    
-  </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-left">Philadelphia, PA · Open to remote</span>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/serenaroderick" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/serenaroderick/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/serenaroderick" target="_blank">Behance</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>

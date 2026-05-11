@@ -1,88 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-4KPKT5JEDR');
   </script>
-  
-  <meta charset="utf-8">
-  <title>Writing | Serena Roderick</title>
-  <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Serena Roderick</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    .post-card {
+      background: var(--glass-bg);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      padding: 1.75rem 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      display: block;
+    }
+    .post-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+    .post-card:hover {
+      background: var(--glass-hover);
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.4);
+    }
+    .post-date {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .post-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .post-excerpt {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .post-tags {
+      margin-top: 1rem;
+      font-size: 0.68rem;
+      color: var(--accent-blue);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .coming-soon {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+    }
+    .coming-soon p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
-
 <body>
-  <div id="menu">
-    <div id="logo">
-      <a href="https://serenaroderick.github.io/">
-        <img id="logo" src="img/LogoWhiteTransparent.png"></a>
+
+<div class="bg-video-wrap"></div>
+<canvas id="rain-canvas"></canvas>
+<div class="fog"></div>
+
+<div class="site">
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img class="nav-logo" src="img/LogoWhiteTransparent.png" alt="Serena Roderick" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main style="flex:1; padding: 4rem 2rem; max-width: 720px; margin: 0 auto; width: 100%;">
+
+    <p class="section-label" style="margin-bottom: 0.75rem;">Dev Blog</p>
+    <h1 style="font-family: 'Instrument Serif', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 400; margin-bottom: 0.75rem;">Notes from the work.</h1>
+    <p style="font-size: 0.88rem; color: var(--text-secondary); font-weight: 300; line-height: 1.6; margin-bottom: 3rem;">
+      Retroactive and ongoing notes on iOS development, design systems, TypeScript, and whatever else I'm building or learning. Also on <a href="https://substack.com" target="_blank" style="color: var(--accent); text-decoration: none;">Substack</a>.
+    </p>
+
+    <!-- POSTS GO HERE — duplicate this block for each post -->
+    <!--
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+      <a href="posts/post-slug.html" class="post-card">
+        <p class="post-date">May 2025</p>
+        <p class="post-title">Your Post Title Here</p>
+        <p class="post-excerpt">A one or two sentence summary of what this post covers.</p>
+        <p class="post-tags">iOS · SwiftUI · Kroger</p>
+      </a>
+
     </div>
-      <div id="pages">
-        <ul>
-        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-  <script src="script.js"></script>
-  <h1 id="title">Writing</h1>
-  <div id="projects">
-    <div class="writing" id="w1">
-      <div id="wBio">
-        <h1>1.</h1>
-        <h2>THE NEED FOR INTERNATIONAL AI REGULATION</h2>
-        <h4>OCTOBER 2020</h4>
-        <p>Analytical essay about a need for a governmental regulatory body to legislate on the future of AI. Written for a technical writing course.</p>
-        <h4>Course: Advanced Writing in the Technical Professions</h4>
-      </div>
-      <a href="https://drive.google.com/file/d/1zLdbAqxy-a-eSe68teL76RXBijNEd9gq/view?usp=sharing" id="button">READ IT</a>
+    -->
+
+    <div class="coming-soon">
+      <p style="font-family: 'Instrument Serif', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-bottom: 1rem;">Posts incoming.</p>
+      <p>Two years of notes, learnings, and half-formed thoughts — getting organized and posted here soon.</p>
     </div>
 
-    <div class="writing" id="w2">
-      <div id="wBio">
-        <h1>2.</h1>
-        <h2>ETHICAL IMPLICATIONS OF MUSK’S NEURALINK AND OTHER AI ENABLED BCIs</h2>
-        <h4>NOVEMBER 2020</h4>
-        <p>Analytical essay about the ethical implications of Brain-Computer-Interface technology.</p>
-        <h4>Course: Advanced Writing in the Technical Professions</h4>
-      </div>
-      <a href="https://drive.google.com/file/d/1NA9lXY0SgZZbXLhI0kA78HWTC1VEHaX2/view?usp=sharing" id="button">READ IT</a>
-    </div>
+  </main>
 
-    <div class="writing" id="w3">
-      <div id="wBio">
-        <h1>3.</h1>
-        <h2>THE CAUSES AND A POSSIBLE SOLUTION TO AMERICAN POLARIZATION</h2>
-        <h4>NOVEMBER 2020</h4>
-        <p>An opinion piece on my feelings towards the increased polarization in American society, and my proposed solutions to these divides.</p>
-        <h4>Course: Ethics in Journalism</h4>
-      </div>
-      <a href="https://drive.google.com/file/d/1yHzo-vtKcbsNnFT9O677H_Ue-XSghOk3/view?usp=sharing" id="button">READ IT</a>
-    </div>
+  <footer>
+    <span class="footer-left">Philadelphia, PA · Open to remote</span>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/serenaroderick" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/serenaroderick/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/serenaroderick" target="_blank">Behance</a></li>
+    </ul>
+  </footer>
 
-    <div class="writing" id="w4">
-      <div id="wBio">
-        <h1>4.</h1>
-        <h2>HOW MANY MARTYRS WILL IT TAKE?</h2>
-        <h4>OCTOBER 2020</h4>
-        <p>My review of the book “You Can’t Kill Us All” by Wesley Lowery.</p>
-        <h4>Course: Ethics in Journalism</h4>
-      </div>
-      <a href="https://drive.google.com/file/d/1FHy13upmxgW9mmJaHy8OJ2QO8-iSC1_J/view?usp=sharing" id="button">READ IT</a>
-    </div>
+</div>
 
-  </div>
+<script src="script.js"></script>
 </body>
-
 </html>

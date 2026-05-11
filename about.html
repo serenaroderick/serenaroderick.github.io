@@ -1,93 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KPKT5JEDR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-4KPKT5JEDR');
   </script>
-  
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Serena Roderick</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <div id="menu">
-    <div id="logo">
-      <a href="https://serenaroderick.github.io/">
-        <img id="logo" src="img/LogoWhiteTransparent.png"></a>
-    </div>
-      <div id="pages">
-        <ul>
-        <li><a id="about" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/about.html">ABOUT</a></li>
-        <li><a id="code" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/code.html">CODE</a></li>
-        <li><a id="design" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/design.html">DESIGN</a></li>
-        <li><a id="writing" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/writing.html">WRITING</a></li>
-        <li><a id="contact" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" href="https://serenaroderick.github.io/contact.html">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
- <script src="script.js"></script>
-  
-  <div id="main">
-    <h1 id="title">Hello!</h1>
-    <h2>Welcome to my Portfolio!</h2>
-    <h4>&emsp;&emsp;&emsp;My name is Serena Roderick and I am a 24 year old living in Brookline, Massachusetts. I graduated Northeastern University in December of 2022 with a Bachelor's degree in Computer Science and Graphic Design. Now I am looking to start my career doing interface design and software development. I have always had a deep fascination with technology due to its seemingly limitless capabilities and contributions to the advancement and betterment of humanity. Being able to make an impact in this field excites me and I am eager to join a company that will allow me to do so.
-</h4>
 
-    <div id="section">
-      <div id="software">
-        <h3>Software</h3>
-        <p>Maya, Unity, Wix, GitHub, Android Studio, Cinema4D, Processing3, Axure, Figma, Photoshop, Illustrator, InDesign, Lightroom, XD</p>
+<div class="bg-video-wrap"></div>
+<canvas id="rain-canvas"></canvas>
+<div class="fog"></div>
+
+<div class="site">
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img class="nav-logo" src="img/LogoWhiteTransparent.png" alt="Serena Roderick" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="code.html">Code</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main style="flex:1; padding: 4rem 2rem; max-width: 820px; margin: 0 auto; width: 100%;">
+
+    <div class="hero-card" style="margin-bottom: 2rem; text-align: left;">
+      <p class="hero-eyebrow">About Me</p>
+      <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1.25rem;">Hello!</h1>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+        I'm Serena — a 27-year-old software developer and designer based between Philadelphia and Dallas. I graduated from Northeastern University in December 2022 with a B.S. in Computer Science and Graphic Design, and I've spent the last few years building production iOS apps, designing interfaces, and writing code across the stack.
+      </p>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; font-weight: 300; margin-top: 1rem;">
+        I'm drawn to the intersection of engineering and aesthetics — things that work well and feel right. When I'm not coding I'm usually world-building, making music, or thinking about systems (the ones in games and the ones in real life).
+      </p>
+    </div>
+
+    <div class="cards-grid" style="margin-bottom: 2rem;">
+      <div class="project-card">
+        <p class="card-tag">Languages</p>
+        <p class="card-desc" style="line-height: 1.8;">Swift · Python · TypeScript · JavaScript · Java · C++ · C# · SQL · HTML/CSS · Elixir</p>
       </div>
-      <div id="languages">
-        <h3>Languages</h3>
-        <p>Python, Java, Javascript/Typescript, React, SQL, XML, Elixir, Linux, Git, Bash, HTML/CSS, Racket, Node.JS, Ruby, C++, C#, Kotlin, R</p>
+      <div class="project-card">
+        <p class="card-tag">Tools & Platforms</p>
+        <p class="card-desc" style="line-height: 1.8;">Xcode · Figma · Adobe Suite · Unity · Git · GitHub · Proxyman · Jira · Linux</p>
       </div>
-    </div>
-    <div id="container">
-      <div id="timeline">
-        <div id="line"></div>
-        <div class="timestamp" id="left">
-          <h2>2011</h2>
-          <p>I fell in love with coding in 8th grade by learning HTML/CSS on Youtube and Codeacademy.com.</p>
-        </div>
-
-        <div class="timestamp" id="right">
-          <h2>2013</h2>
-          <p>In my sophomore year of high school I took my first graphic design class which allowed me to discover the artistic side of myself that I had never pursued before. </p>
-        </div>
-
-        <div class="timestamp" id="left">
-          <h2>2015</h2>
-          <p>I started my first freelance work doing graphic design, 3D modeling, and animation. This experience helped me to gain the knowledge and experience necessary to be the confident designer that I am today.
-          <p>
-        </div>
-
-        <div class="timestamp" id="right">
-          <h2>2019</h2>
-          <p>In my 3rd year at Northeastern, I started my first full-time job as a graphic designer. I worked for Northeastern’s Advancement Events team to create posters, nametags, signage, and brochures for upcoming university events. I also managed the team’s website, social media, and frequent correspondence with vendors and clients. This experience helped me to realize that I wanted to pursue a career in this field.</p>
-        </div>
-
-        <div class="timestamp" id="left">
-          <h2>TODAY</h2>
-          <p>Currently I am looking for a software development job. Through my studies I have become a  confident programmer in Python, Java, HTML/CSS, Javascript, and C#. I am excited to take on challenging projects where I can have an impact and I am ready to start as soon as possible!</p>
-        </div>
+      <div class="project-card">
+        <p class="card-tag">Frameworks</p>
+        <p class="card-desc" style="line-height: 1.8;">SwiftUI · UIKit · React · Django · Node.js · Express · Phoenix · ASP.NET</p>
       </div>
     </div>
-    <div id="end">
-      <h3>Thanks for your interest!</h3>
-      <a href="https://drive.google.com/file/d/1_kc-7JAdxn-WYLZFBdWk6Wq4a_SlUnfu/view" id="resume">MY RESUME</a>
+
+    <div class="hero-card" style="text-align: left;">
+      <p class="hero-eyebrow">Timeline</p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.75rem; margin-top: 1rem;">
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">2011</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">Fell in love with coding in 8th grade — learned HTML &amp; CSS from YouTube and Codecademy.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">2013</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">Took my first graphic design class sophomore year of high school. Discovered the artistic side of myself I'd never really pursued before.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">2015</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">Started freelancing in graphic design, 3D modeling, and animation. Built the confidence and range I still draw on today.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">2019</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">First full-time role at Northeastern's Advancement Events team — design, web, and client work. Realized this was the career I wanted.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">2022</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">Graduated Northeastern with a B.S. in CS &amp; Design. Moved into full stack and design contract work while building toward iOS.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">2025</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">Completed an intensive Swift bootcamp and went into production iOS development — shipping features on apps with millions of users at Kroger and American Airlines.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 1.1rem; color: var(--accent); min-width: 48px;">Now</span>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">Building iOS apps, TypeScript projects, and this site. Open to remote contract and full-time work. Always making something on the side.</p>
+        </div>
+
+      </div>
     </div>
-  </div>
+
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="contact.html" class="btn btn-accent">Get in touch</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-left">Philadelphia, PA · Open to remote</span>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/serenaroderick" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/serenaroderick/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/serenaroderick" target="_blank">Behance</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
