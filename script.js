@@ -1,17 +1,43 @@
 let drops = [];
 let W, H;
+let canvas = null;
+let ctx = null;
 
 document.addEventListener("DOMContentLoaded", function() {
-    const canvas = document.getElementById('rain-canvas');
-    const ctx = canvas.getContext('2d');
+    canvas = document.getElementById('rain-canvas');
+    if (!canvas) {
+        return;
+    }
+
+    ctx = canvas.getContext('2d');
+    if (!ctx) {
+        return;
+    }
+
+    resize();
+    initDrops();
+    draw();
+
+    window.addEventListener('resize', () => {
+        resize();
+        initDrops();
+    });
 });
 
 function resize() {
+    if (!canvas) {
+        return;
+    }
+
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
 }
 
 function initDrops() {
+    if (!ctx) {
+        return;
+    }
+
     drops = [];
     const count = Math.floor(W * 0.06);
     for (let i = 0; i < count; i++) {
@@ -27,6 +53,10 @@ function initDrops() {
 }
 
 function draw() {
+    if (!ctx) {
+        return;
+    }
+
     ctx.clearRect(0, 0, W, H);
     drops.forEach(d => {
         ctx.beginPath();
@@ -42,17 +72,6 @@ function draw() {
         }
     });
     requestAnimationFrame(draw);
-}
-
-    // Initial run
-    resize();
-    initDrops();
-    draw();
-
-    window.addEventListener('resize', () => {
-        resize();
-        initDrops();
-    });
 }
 
 function mouseOver(x) {
