@@ -2,7 +2,6 @@ let drops = [];
 let W, H;
 const canvas = document.getElementById('rain-canvas');
 
-// Only run the animation if the canvas actually exists on the current page
 if (canvas) {
     const ctx = canvas.getContext('2d');
 
@@ -55,7 +54,6 @@ if (canvas) {
     });
 }
 
-// These functions are safe to leave outside because they don't use the canvas
 function mouseOver(x) {
     x.style.color = "white";
     x.style.textDecoration = "underline";
