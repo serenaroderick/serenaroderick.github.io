@@ -1,7 +1,6 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    /* Globals */
-    section {
+    
     :root {
       --glass-bg: rgba(255,255,255,0.12);
       --glass-border: rgba(255,255,255,0.28);
@@ -13,6 +12,9 @@
       --accent-blue: #8ec5e6;
       --blur: blur(18px);
     }
+
+    /* Globals */
+    section {
 
     html, body {
       height: 100%;
@@ -266,11 +268,9 @@
     }
 
     .cards-grid {
-      display: grid;
+      display: flex;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
-      display: flex;
-      justify-content: space-between; /* Spaces them out evenly */
       gap: 1.5rem; /* Adds space between the cards */
       margin-bottom: 2rem;  
     }
